@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
 import MovieCard from "../components/MovieCard";
 
 const FEATURED_API ="https://api.themoviedb.org/3/discover/movie?api_key=d6278b3dc3e6f8f8376a89851c3f8c8f";
@@ -24,15 +25,17 @@ const Main = ()=>{
         if(searchTerm){
             getMovies(SEARCH_API + searchTerm)
         }
-        searchTerm("")
+        setSearchTerm("")
     }
     return(
         <>
             <form className="search" onSubmit={handleSubmit}>
                 <input type="search" className="search-input" placeholder="Search a movie..."
-                value={searchTerm}>
+                value={searchTerm}
+                onChange={(e)=>setSearchTerm(e.target.value)}>
                 </input>
-
+            <Button type="submit" className="btn-primary">
+                Search</Button>
             </form>
 
         <div className="movie-container">

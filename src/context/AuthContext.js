@@ -1,14 +1,14 @@
 import React from 'react';
 import { createContext, useState } from 'react';
 
-export const AutContext =createContext()
+export const AuthContext =createContext()
 
 const AuthContextProvider = (props) => {
     const [currentUser, setCurrentUser]= useState()
     return (
-        <AutContext.Provider value={{currentUser}}>
+        <AuthContext.Provider value={{currentUser}}>
             {props.children}
-        </AutContext.Provider>
+        </AuthContext.Provider>
     )
 }
 
