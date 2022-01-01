@@ -18,7 +18,7 @@ const Navbar = () => {
         </a>
         <div className="buttons ms-auto">
           {currentUser ? (
-            <h3>{currentUser.displayName}</h3>) : (<button
+            <h5 style={{margin:20}}>{currentUser.displayName}</h5>) : (<button
               type="button"
               className="ms-2 btn btn-outline-light"
               onClick={() => navigate("/login")}>

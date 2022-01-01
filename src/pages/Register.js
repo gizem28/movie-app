@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async () => {
     const displayName = firstName + " " + lastName;
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      let user = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(auth.currentUser, { displayName: displayName });
       console.log(auth.currentUser);
       navigate("/");
