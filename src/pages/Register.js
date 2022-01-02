@@ -2,6 +2,7 @@ import { useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../auth/firebase-config";
 import { useNavigate } from "react-router-dom";
+import movie2 from "../movie2.jpg";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const Register = () => {
   return (
     <div className="register">
       <div className="form-image">
-        <img src={"https://picsum.photos/800/800"} alt="sample-movie" />
+        <img src={movie2} style={{width:700, height:"100%", objectFit:"cover"}} alt="sample-movie" />
       </div>
       <div className="register-form">
         <h1 className="form-title display-3">Register</h1>
@@ -81,6 +82,7 @@ const Register = () => {
             type="button"
             className="btn btn-primary form-control"
             value="Register"
+            style={{marginTop:40}}
             onClick={handleSubmit}/>
         </form>
       </div>

@@ -38,7 +38,7 @@ const Main = ()=>{
                 value={searchTerm}
                 onChange={(e)=>setSearchTerm(e.target.value)}>
                 </input>
-            <Button type="submit" className="btn-primary">
+            <Button type="submit" className="btn-s">
                 Search</Button>
             </form>
 
